@@ -59,7 +59,7 @@ function e.CreateKeyLink(mapID, keyLevel)
 	else
 		mapName = e.GetMapName(mapID)
 	end
-	return strformat('|c' .. COLOUR[3] .. '|Hkeystone:158923:%d:%d:%d:%d:%d:%d|h[Keystone: %s (%d)]|h|r', mapID, keyLevel, e.AffixOne(), e.AffixTwo(), e.AffixThree(), e.AffixFour(), mapName, keyLevel):gsub('\124\124', '\124')
+	return strformat('|c' .. COLOUR[3] .. '|Hkeystone:158923:%d:%d:%d:%d:%d:%d|h[%s: %s (%d)]|h|r', mapID, keyLevel, e.AffixOne(), e.AffixTwo(), e.AffixThree(), e.AffixFour(), L['Keystone'], mapName, keyLevel):gsub('\124\124', '\124')
 end
 
 AstralEvents:Register('CHALLENGE_MODE_COMPLETED', function()
